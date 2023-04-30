@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true"
+    android:layout_height="250dp">
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        >
+
+        <ImageView
+            android:id="@+id/locationimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/locationfour"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/locationname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penida Island"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginTop="150dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+
+
+        <ImageView
+            android:id="@+id/locationpoint"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/locationpoint"
+            android:layout_below="@+id/locationname"
+            android:layout_marginTop="0dp"/>
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indonesia"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginLeft="0dp"
+            android:layout_below="@+id/locationname"
+            android:layout_toRightOf="@+id/locationpoint"
+          />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

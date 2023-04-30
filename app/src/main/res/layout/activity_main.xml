@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="#1F1F29"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#1F1F29">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/my_image_view"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/mypic"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:id="@+id/welcomeback"
+                android:layout_toRightOf="@+id/my_image_view"
+                android:textColor="#575B66"
+                android:textSize="10sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GURSAHIB SINGH SAHNI"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_below="@+id/welcomeback"
+                android:layout_toRightOf="@+id/my_image_view"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_toRightOf="@+id/name"
+                android:src="@drawable/whitebell"
+                android:layout_alignParentEnd="true"/>
+
+            <SearchView
+                android:id="@+id/simpleSearchView"
+                android:layout_below="@+id/my_image_view"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search here"
+               android:background="@drawable/editbuton"/>
+
+            <TextView
+                android:id="@+id/suggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggestions for you"
+                android:layout_below="@+id/simpleSearchView"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/seeall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See all >"
+                android:layout_below="@+id/simpleSearchView"
+                android:layout_toRightOf="@+id/suggestion"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:layout_marginTop="20dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_below="@+id/suggestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/thebesttour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Best Tour"
+                android:layout_below="@+id/recyclerview"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewui2"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_below="@+id/thebesttour" />
+
+           <com.google.android.material.bottomnavigation.BottomNavigationView
+               android:layout_width="400dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="10dp"
+               android:layout_below="@+id/recyclerviewui2"
+               app:menu="@menu/menu"
+               android:background="@drawable/editbuton"
+               />
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </ScrollView>
+
+   <!-- <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/my_image_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/mypic"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000" />
+   &lt;!&ndash; <ImageView
+        android:id="@+id/my_image_view"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/baseline_person_24"
+        />&ndash;&gt;
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:id="@+id/welcomeback"
+        android:layout_toRightOf="@+id/my_image_view"
+        android:textColor="#575B66"
+        android:textSize="10sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GURSAHIB SINGH SAHNI"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/welcomeback"
+        android:layout_toRightOf="@+id/my_image_view"
+        android:layout_marginLeft="10dp"
+        />
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_toRightOf="@+id/name"
+        android:src="@drawable/whitebell"
+        android:layout_alignParentEnd="true"/>
+
+    <SearchView
+        android:id="@+id/simpleSearchView"
+        android:layout_below="@+id/my_image_view"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search here"
+        android:background="#EBEBF1"/>
+
+    <TextView
+        android:id="@+id/suggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggestions for you"
+        android:layout_below="@+id/simpleSearchView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/seeall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See all >"
+        android:layout_below="@+id/simpleSearchView"
+        android:layout_toRightOf="@+id/suggestion"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:gravity="right"
+        android:layout_marginTop="20dp"
+       />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+-->
+</RelativeLayout>

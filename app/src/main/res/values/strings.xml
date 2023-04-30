@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Layoutdesign</string>
+    <string name="title_home">title_home</string>
+    <string name="home">home</string>
+    <string name="dashboard">dashboard</string>
+    <string name="Notifications">Notifications</string>
+    <string name="notifications">notifications</string>
+</resources>

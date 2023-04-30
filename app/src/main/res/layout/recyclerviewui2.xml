@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="410dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    android:background="#131316"
+    app:cardPreventCornerOverlap="true"
+    android:layout_height="150dp">
+
+    <RelativeLayout
+        android:id="@+id/relativelayouttwo"
+        android:background="#131316"
+        android:layout_width="410dp"
+        android:layout_height="150dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/tourpic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/desert"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tourname"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Western Desert"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rateingcard"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="10dp"
+            android:layout_toRightOf="@+id/tourname"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                android:background="#434343"
+                >
+
+                <TextView
+                    android:id="@+id/ratingnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.9"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_star_24"
+                    android:layout_toRightOf="@id/ratingnumber"/>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_below="@+id/tourname"
+            android:src="@drawable/baseline_calendar_month_24"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tourdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/calendar"
+            android:layout_below="@+id/tourname"
+            android:text="12 - 18 Jan 2023"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/dollar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/cardview"
+            android:layout_below="@+id/calendar"
+            android:src="@drawable/baseline_attach_money_24"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tourprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dollar"
+            android:layout_below="@+id/tourdate"
+            android:text="450"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/perday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tourprice"
+            android:layout_below="@+id/tourdate"
+            android:text="/Day"
+            android:textColor="#5C5858"
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/perday"
+            android:layout_below="@+id/tourdate"
+            android:src="@drawable/baseline_location_on_24"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/countryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/location"
+            android:layout_below="@+id/tourdate"
+            android:text="Dubai"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
